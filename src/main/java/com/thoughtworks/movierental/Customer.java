@@ -11,7 +11,6 @@ class Customer {
     _name = name;
   }
 
-
   public void addRental(Rental arg) {
     _rentals.addElement(arg);
   }
