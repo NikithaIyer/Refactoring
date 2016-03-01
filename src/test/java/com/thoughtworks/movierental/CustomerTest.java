@@ -7,15 +7,15 @@ import static org.junit.Assert.assertEquals;
 public class CustomerTest {
 
     @Test
-    public void testRentalMessageForRegularMovieRental() {
+    public void testRentalMessageForChildrensMovieRental() {
         Customer customer = new Customer("Smith");
-        Movie movie = new Movie("Titanic", 200);
+        Movie movie = new Movie("Up", 2);
         Rental rental1 = new Rental(movie, 4);
         customer.addRental(rental1);
 
         String expectedOutput = "Rental Record for Smith\n" +
-                "\tTitanic\t0.0\n" +
-                "Amount owed is 0.0\n" +
+                "\tUp\t3.0\n" +
+                "Amount owed is 3.0\n" +
                 "You earned 1 frequent renter points";
 
         String statement = customer.statement();
