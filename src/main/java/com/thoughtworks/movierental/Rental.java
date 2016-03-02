@@ -1,19 +1,27 @@
 package com.thoughtworks.movierental;
 
 class Rental {
-  private Movie _movie;
-  private int _daysRented;
+    Movie movie;
+    private int daysRented;
 
-  public Rental(Movie movie, int daysRented) {
-    _movie = movie;
-    _daysRented = daysRented;
-  }
+    public Rental(Movie movie, int daysRented) {
+        this.movie = movie;
+        this.daysRented = daysRented;
+    }
 
-  public int getDaysRented() {
-    return _daysRented;
-  }
+    public int getDaysRented() {
+        return daysRented;
+    }
 
-  public Movie getMovie() {
-    return _movie;
-  }
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public double charge() {
+        return movie.charge(daysRented);
+    }
+
+    public int frequentRenterPoints() {
+        return movie.frequentRenterPoints(daysRented);
+    }
 }
